@@ -4,5 +4,6 @@ resource "aws_route53_record" "test" {
   name    =  "${var.instnaces_count[count.index]}" == "frontend" ? "${var.domain_name}" :  "${var.instnaces_count[count.index]}.${var.domain_name}"
   type    = "A"
   ttl     = 1
+  allow_overwrite = true
   records = "${var.instnaces_count[count.index]}" == "frontend" ? [aws_instance.terraform_test[count.index].public_ip] : [aws_instance.terraform_test[count.index].private_ip]
 }
