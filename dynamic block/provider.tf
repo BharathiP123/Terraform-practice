@@ -1,7 +1,7 @@
 terraform {
    backend "s3" {
     bucket = "bpotla-remotestate-backend-terraform-state"
-    key    = "remotestate-backend-dynamic-clock"
+    key    = "remotestate-backend-dynamic-block"
     region = "us-east-1"
   }
   required_providers {

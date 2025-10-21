@@ -1,7 +1,7 @@
 locals {
   instancetype = var.instance_type
   comm_tag = "${var.project}-${var.environment}"
-  amiid = "${data.aws_ami.myami.id}"
+  amiid = data.aws_ami.myami.id
   ec2_tags = merge(
       var.common_tags, 
       {      

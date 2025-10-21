@@ -7,4 +7,3 @@ variable "domain_name" {
     default = "bpotla.com"
  
 }
-
